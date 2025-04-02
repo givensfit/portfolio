@@ -1,0 +1,232 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+  scroll-behavior: smoot;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #F1F5F9;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; outline: none; color: #000;}
+a:focus { outline: none; }
+ul, li { list-style: none; }
+
+.github_portfolio {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+section {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 2rem;
+  border: 1px solid ;
+  background-color: white;
+  border: none;
+  box-shadow: 0 0 10px 0px gray;
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -100%;
+
+  transition: top 600ms;
+}
+
+.card:hover {
+  top: 0;
+}
+
+.section-name > p {
+  text-align: center;
+  line-height: 20rem;
+  font-size: 2.5rem;
+}
+
+.bg-section {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+
+.github .bg-section {
+  background: url('../assets/icons/github.svg') no-repeat center / 10rem;
+}
+
+.portfolio .bg-section {
+  background: url('../assets/icons/portfolio.svg') no-repeat center / 10rem;
+}
+
+.title {
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #F3F3F3;
+  border-top: 5px solid #3498DB;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container-grid {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+@media (min-width: 380px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 940px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.grid > div {
+  width: 25rem;
+  height: 18rem;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: -3px 3px 5px -3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 380px) {
+  .grid > div {
+    width: 15rem;
+    height: 11rem;
+  }
+}
+@media (min-width: 490px) {
+  .grid > div {
+    width: 20rem;
+    height: 15rem;
+  }
+}
+@media (min-width: 540px) {
+  .grid > div {
+    width: 22rem;
+  }
+}
+
+
+
+.card-project {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -100%;
+
+  transition: top 600ms;
+}
+
+.card-project:hover {
+  top: 0;
+}
+
+.card-project > a {
+  display: block;
+  height: 50%;
+}
+
+.card-project--img {
+  height: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-project h3 {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.card-project p {
+  color: white;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.htmlcss {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    url('../assets/bg/htmlcss.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.jsvanilla {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    url('../assets/bg/jsvanilla.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.reactjs {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    url('../assets/bg/reactjs.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.nodejs {
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                    url('../assets/bg/nodejs.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
